@@ -1,3 +1,14 @@
 This is the info file of the project.
 
-All the variables declared must be posted here with short describtion.
+All the variables declared must be posted here with short description.
+
+Database
+    |-Tables
+        |
+        |- spots
+            |
+            |- id
+            |- lng
+            |- lat
+            |- name
+        |- users

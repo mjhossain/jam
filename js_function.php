@@ -1,6 +1,6 @@
 <html>
 	<script>
-		
+
 
 			var map;
 			var infoWindow;
@@ -11,35 +11,35 @@
 					     {
 						 lat: 40.744459,
 						 lng: -73.935480,
-						 name: "Bujar Sefa",
-						 address1:"Leaving in 10 minutes.",
-						 address2: "Cost: 10 dollars.",
-						 postalCode: "5.0 average based on 127 reviews" },
+						 name: "Bujar Sefa", },
+						 // address1:"Leaving in 10 minutes.",
+						 // address2: "Cost: 10 dollars.",
+						 // postalCode: "5.0 average based on 127 reviews" },
 					     {
 						 lat: 40.744101,
 						 lng: -73.935643,
-						 name: "Christina Sarcone",
-						 address1:"Leaving in an hour.",
-						 address2: "Cost: 5 dollars.",
-						 postalCode: "4.1 average based on 254 reviews."  },
+						 name: "Christina Sarcone", },
+						 // address1:"Leaving in an hour.",
+						 // address2: "Cost: 5 dollars.",
+						 // postalCode: "4.1 average based on 254 reviews."  },
 					     {
 						 lat: 40.744756,
 						 lng: -73.939137,
 						 name: "Donjeta Sefa",
-						 address1:"Leaving at 10 am. Monday 11/13/17",
-						 address2: "Cost: 12 dollars.",
-						 postalCode: "3.9 average based on 634 reviews"
+						 // address1:"Leaving at 10 am. Monday 11/13/17",
+						 // address2: "Cost: 12 dollars.",
+						 // postalCode: "3.9 average based on 634 reviews"
 					     } // don't insert comma in the last item
 					     ];
 
 			function initialize() {
 			    var mapOptions = {
-			        
+
 			        zoom: 18,
 			        center: new google.maps.LatLng(40.7446287, -73.939071),
 			        mapTypeId: google.maps.MapTypeId.ROADMAP
 			    };
-			    
+
 			    map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 
@@ -74,11 +74,9 @@
 
 			        var latlng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
 			        var name = markersData[i].name;
-			        var address1 = markersData[i].address1;
-			        var address2 = markersData[i].address2;
-			        var postalCode = markersData[i].postalCode;
 
-			        createMarker(latlng, name, address1, address2, postalCode);
+
+			        createMarker(latlng, name);
 
 			        // marker position is added to bounds variable
 			        bounds.extend(latlng);
@@ -90,7 +88,7 @@
 			}
 
 			// This function creates each marker and it sets their Info Window content
-			function createMarker(latlng, name, address1, address2, postalCode){
+			function createMarker(latlng, name){
 			    var marker = new google.maps.Marker({
 				    map: map,
 				    position: latlng,
@@ -128,10 +126,7 @@
 
 				    // Creating the content to be inserted in the infowindow
 			        var iwContent = '<div id="iw_container">' +
-			              '<div class="iw_title">' + name + '</div>' +
-			           '<div class="iw_content">' + address1 + '<br />' +
-			           address2 + '<br />' +
-				    postalCode + '</div></div>';
+			              '<div class="iw_title">' + name;
 			        // including content to the Info Window.
 			        infoWindow.setContent(iwContent);
 			        // opening the Info Window in the current map and at the current marker location.
@@ -153,7 +148,7 @@
 
 
 			}
-			
+
 
 
 
