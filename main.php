@@ -1,3 +1,6 @@
+<html>
+
+<script>
 var map;
 var infoWindow;
 var markerImage = 'marker.png';
@@ -150,3 +153,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+</script>
+
+</html>
