@@ -1,3 +1,4 @@
+<?php require_once('database_functions.php'); ?>
 <html>
 
 
@@ -9,7 +10,7 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='style.css' rel='stylesheet' type='text/css'>
     </head>
-    
+
 
 
 
@@ -23,12 +24,12 @@
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
-</div> 
+</div>
 
 <div id="main">
   <h2>Sidenav Push Example</h2>
   <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
- 
+
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 </div> -->
 
@@ -51,25 +52,25 @@ function closeNav() {
 <!-- Side Navigation Function and Style Ends Here -->
 
 
-        
+
                 <div class="container mx-auto col-md-8">
-                    
+
                     <h1>JAM Parking App<!--<a href="http://bootstrapious.com">Bootstrapious.com</a>--></h1>
                     <p class="lead">This web-application is created with the intention to help New York residents who goes through tough time finding public parking spots</p>
                     <!--<p>What this does.</p>
                     <p><strong>Parking Spot</strong>The purpose of this is for me to find out whats going on.<em>next thing</em> lol <code>lll</code>, whaat <a href="#">Ut felis.</p>  -->
-                	
+
                 </div>
 
         <br /><br />
-        
+
         <div class="container mx-auto col-md-8" id="map"></div>
-        
+
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbmQSmcoYw8gdndISRXwyZMvGEqCNPv3w"></script>
      <!--    <script src="main.js"></script> -->
-      
+
         <br />
         <br />
         <br />
@@ -80,10 +81,11 @@ function closeNav() {
 
       <?php
 
-       require_once('js_function.php'); 
+       require_once('js_function.php');
        // require_once('main.php');
 
        ?>
 
 
 </html>
+<?php close_connection(); ?>
