@@ -1,4 +1,4 @@
-<?php require_once('database_functions.php'); ?>
+
 <html>
 	<script>
 
@@ -8,33 +8,55 @@
 			var markerImage = 'marker.png';
 
 				// Important Code Commented
-													  var markersData = [
-															     {
-																 lat: 40.744459,
-																 lng: -73.935480,
-																 name: "Bujar Sefa", },
-																 // address1:"Leaving in 10 minutes.",
-																 // address2: "Cost: 10 dollars.",
-																 // postalCode: "5.0 average based on 127 reviews" },
-															     {
-																 lat: 40.744101,
-																 lng: -73.935643,
-																 name: "Christina Sarcone", },
-																 // address1:"Leaving in an hour.",
-																 // address2: "Cost: 5 dollars.",
-																 // postalCode: "4.1 average based on 254 reviews."  },
-															     {
-																 lat: 40.744756,
-																 lng: -73.939137,
-																 name: "Donjeta Sefa",
-																 // address1:"Leaving at 10 am. Monday 11/13/17",
-																 // address2: "Cost: 12 dollars.",
-																 // postalCode: "3.9 average based on 634 reviews"
-															     } // don't insert comma in the last item
-															     ];
+													  // var markersData = [
+														// 	     {
+														// 		 lat: 40.744459,
+														// 		 lng: -73.935480,
+														// 		 name: "Bujar Sefa", },
+														// 		 // address1:"Leaving in 10 minutes.",
+														// 		 // address2: "Cost: 10 dollars.",
+														// 		 // postalCode: "5.0 average based on 127 reviews" },
+														// 	     {
+														// 		 lat: 40.744101,
+														// 		 lng: -73.935643,
+														// 		 name: "Christina Sarcone", },
+														// 		 // address1:"Leaving in an hour.",
+														// 		 // address2: "Cost: 5 dollars.",
+														// 		 // postalCode: "4.1 average based on 254 reviews."  },
+														// 	     {
+														// 		 lat: 40.744756,
+														// 		 lng: -73.939137,
+														// 		 name: "Donjeta Sefa",
+														// 		 // address1:"Leaving at 10 am. Monday 11/13/17",
+														// 		 // address2: "Cost: 12 dollars.",
+														// 		 // postalCode: "3.9 average based on 634 reviews"
+														// 	     } // don't insert comma in the last item
+														// 	     ];
 								// Imporant Code Comment Ends
 
+// the below code makes a marker with data retrived from database
 
+// The only problem however is that it can retrive when only one row is called at a time
+
+								<?php
+
+								$marker_data = find_marker_by_id(9);
+
+									$lat = $marker_data['lat'];
+									$lng = $marker_data['lng'];
+									// $name = (string) $marker_data['name'];
+
+
+								 ?>
+
+								 var markersData = [
+								 	     {
+								 		 lat: <?php echo $lat; ?>,
+								 		 lng: <?php echo $lng; ?>, }
+
+									 ];
+
+// the below code makes a marker with data retrived from database
 
 
 			function initialize() {
