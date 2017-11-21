@@ -1,0 +1,45 @@
+Here codes are tested
+
+// ix this code to work with loop
+<?php
+
+$marker_set = find_all_markers();
+
+  foreach($marker_set as $marker) {
+      $lat = $marker['lat'];
+      $lng = $marker['lng'];
+  }
+        $marker_count = mysqli_num_rows($marker_set);
+    for($count=1; ; $count++) {
+      ?>
+        var markersData = [
+
+          <?php
+
+            if($count < $marker_count) {
+            ?>
+
+                   {
+                 lat: <?php echo $lat; ?>,
+                 lng: <?php echo $lng; ?>, },
+
+            <?php
+                } elseif ($count = $marker_count) { // checks when the data ends
+              ?>
+
+                    {
+                  lat: <?php echo $lat; ?>,
+                  lng: <?php echo $lng; ?>, }
+
+
+            <>php
+                } // closing the if block
+            ?>
+               ];
+        <?php
+              }; // closing the while loop
+
+
+
+
+        ?>

@@ -1,1 +1,16 @@
 This file contains model code which works
+
+This following code can be modified for the js function to work as a loop code and echo different data
+
+<?php
+          $post_set = find_all_posts(); // finds all posts
+          $post_count = mysqli_num_rows($post_set); //sets a counter for posts
+          for($count=1; $count <= $post_count; $count++) { // starts the loop to print stuff
+            echo "<option value=\"{$count}\""; // echos some value
+            if ($post["position"] == $count) { // condition applied
+              echo " selected";
+            }
+            echo ">{$count}</option>";
+          }
+
+        ?>
