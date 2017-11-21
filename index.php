@@ -81,8 +81,8 @@ function closeNav() {
 
       <?php
 
-       require_once('js_func_test.php');
-       // require_once('main.php');
+       require_once('js_function.php');
+       // require_once('main.ph');
 
        ?>
 
