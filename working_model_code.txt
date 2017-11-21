@@ -14,3 +14,51 @@ This following code can be modified for the js function to work as a loop code a
           }
 
         ?>
+
+
+
+
+The below code is the working model for while loop and printing all database objects
+
+
+<?php
+
+$marker_set = find_all_markers();
+ ?>
+
+ var markersData = [
+
+ <?php
+ $marker_count = mysqli_num_rows($marker_set);
+ while($marker = mysqli_fetch_assoc($marker_set)) {
+
+
+           $lat = $marker['lat'];
+           $lng = $marker['lng'];
+ ?>
+
+
+
+          {
+        lat: <?php echo $lat; ?>,
+        lng: <?php echo $lng; ?>, },
+
+
+
+ <?php  } //ending while block ?>
+
+
+// Below code is just to debug and error as there should not be an ',' after '}' in the last object
+        {
+          lat: 40.7446287,
+           lng: -73.939071,
+        }
+
+// Above code is for debug
+
+          ];
+
+
+
+
+// Working model code ends here          

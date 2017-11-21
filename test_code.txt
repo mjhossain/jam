@@ -38,8 +38,47 @@ $marker_set = find_all_markers();
                ];
         <?php
               }; // closing the while loop
-
-
-
-
         ?>
+
+
+
+        <?php
+        $marker_count = mysqli_num_rows($marker_set);
+        while($marker = mysqli_fetch_assoc($marker_set)) {
+          for($count = 1; $count <= $marker_count; $count++) {
+
+                  $lat = $marker['lat'];
+                  $lng = $marker['lng
+        ?>
+
+        <?php
+
+          if($count < $marker_count) {
+          ?>
+
+                 {
+               lat: <?php echo $lat; ?>,
+               lng: <?php echo $lng; ?>, },
+
+          <?php
+              } elseif ($count = $marker_count) { // checks when the data ends
+            ?>
+
+                  {
+                lat: <?php echo $lat; ?>,
+                lng: <?php echo $lng; ?>, }
+
+
+          <>php
+              } // closing the if block
+          ?>
+             ];
+      <?php
+            }; // closing the while loop
+      ?>
+
+
+        <?php  } ?>
+
+
+        <?php } ?>
