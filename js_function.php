@@ -38,7 +38,8 @@
 								<?php
 
 								$marker_set = find_all_markers();
-								 ?>
+
+								?>
 
 								 var markersData = [
 
@@ -62,7 +63,7 @@
 								 <?php  } //ending while block ?>
 
 
-								// Below code is just to debug and error as there should not be an ',' after '}' in the last object
+								// Below code is just to debug and error, as there should not be a ',' after '}' in the last object
 												{
 													lat: 40.7446287,
 													 lng: -73.939071,
