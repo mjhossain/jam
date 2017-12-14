@@ -2,7 +2,7 @@
 
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
-    define('DB_PASS', '2369901297');
+    define('DB_PASS', 'reddevil');
     define('DB_NAME', 'jam');
 
   // Function open database connection
