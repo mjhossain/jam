@@ -19,3 +19,22 @@ h1{
   */
 }
 
+#header_wrapper {
+	margin-top: 5%;
+}
+
+#logo-img {
+	width: 100px;
+	height: 100px;
+}
+
+#title_container {
+	position: relative;
+}
+
+#title {
+	position: absolute;
+	bottom: 0;
+   	right: 0;
+}
+

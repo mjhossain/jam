@@ -1,0 +1,1 @@
+<?php close_connection(); ?>
